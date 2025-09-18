@@ -1,0 +1,585 @@
+<html>
+	<head>
+		<title>充分利用身边资源</title>
+		<!--问题2 如何更好的显示当前日期-->
+		<!--网页标题左侧显示图标logo-->
+    <link rel="icon" href="http://www.mdsyshare.club/images/logo.ico" type="image/x-icon">
+    <!--收藏夹显示图标logo-->
+    <link rel="shortcut icon" href="http://www.mdsyshare.club/images/logo.ico" type="image/x-icon">
+    <!--Scrollbar-Track-Color:;问题2：滚动条的背景色还未设置为透明-->
+		<style type="text/css">			
+			div.scroll_1{height:1350;overflow:scroll;overflow-x:hidden;}
+			a {text-decoration:none;color:black;font-family:楷体;font-size:20}	　　	
+　　	a:visited {text-decoration:none;color:green;}	/*问题3 未实现*/
+			a:hover {text-decoration:underline;color:red;} 	
+			a:active {text-decoration:none;color:yellow;}	
+			h#personal{color:red;font-weight:bold;font-size:25}
+			h#brackets{color:black;font-weight:bold;font-size:20}
+		</style>
+		<script type="text/javascript" src="./file/time/time.js"></script>
+		<!--页面加载完毕滚动条延时自动置于顶部 setTimeout(() => window.scrollTo(0,0), 0) -->	
+		<script type="text/javascript">
+			function scrollWindow(){window.scrollTo(0,-500)}
+		</script>	
+	</head>
+	
+	<body style="background-image:url(./images/首页背景.jpg);background-attachment:fixed;" onload="scrollWindow();startTime()">		
+		<!--页眉-->			
+		<table width="100%" border="0" style="background-image:url(&#39;./images/首页背景.jpg&#39;);z-index:5000;position:fixed;left:0;top:0;">
+			<tbody><tr height="60">
+				<td>
+					<h2><a href="http://www.mdsyshare.club/shouye.html" style="font-family:宋体;font-size:28;">返回首页</a></h2>					
+				</td>	
+				<td valign="center" align="right" style="padding-right:8;">
+					 <!--以下table元素为页眉处时间显示-->
+					 <table border="1" width="115" height="79" cellpadding="0" cellspacing="0">
+							<tr style="font-family:jokerman;" align="center" valign="center">
+								<td align="center" style="background-color:#EE3912;border:0px solid #921803;box-shadow:2px 2px 2px #060100;"><span id="nowYMDSpan"></span></td>
+							</tr>
+							<tr style="font-family:jokerman;" align="center" valign="center">
+								<td align="center" style="background-color:#FAFDFD;border:0px solid #d6d755;box-shadow:2px 2px 2px #060100;"><span id="nowHMSSpan"></span></td>
+							</tr>
+							<tr style="font-family:幼圆;" align="center" valign="center">
+								<td align="center" style="background-color:#FAFDFD;border:0px solid #d6d755;box-shadow:2px 2px 2px #060100;"><span id="nowWeekSpan"></span></td>
+							</tr>
+						</table>
+				</td>																	
+				<td align="right" width="90">					
+					<a href="./网页设计者简介.html" target="_blank" title="网页设计者简介"><img src="./images/头像.jpg" width="90" height="80"></a>	
+				</td>
+			</tr>
+		</tbody></table>
+		
+	<!--页眉和正文之间的空行-->
+		<table border="1" width="100%" style="background-image:url(&#39;./images/首页背景.jpg&#39;);z-index:5000;position:fixed;left:0;top:86;">
+			<!--第二行为分割行，暂时不放内容-->
+			<tr height="30">
+				<td></td>
+			</tr>
+		</table>
+	
+	
+		<table border="1" width="100%" style="position:absolute;left:0;top:118;">		
+			<!--本行为本页面的核心行，分两列，其中第二列又为重中之重-->
+			<tr height="30">
+				
+				<td width="20%" align="left" valign="top">
+					<table border="1" width="100%">
+						<tr>
+							<td style="line-height:25px;padding-top:0px;padding-left:0px;">								
+								<a href="https://v2.alapi.cn/api/zaobao?token=EP3bPwSQCgxKM1CU&format=image" target="_blank" title="每日60秒读懂世界"><img src="https://v2.alapi.cn/api/zaobao?token=EP3bPwSQCgxKM1CU&format=image" width="100%" height="100%"></a><br>
+							</td>
+						</tr>
+					</table>
+					
+					<table border="1" width="100%">
+						<tbody><tr>
+							<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								侧边栏可留天气、日历等显示
+							</td>
+						</tr>
+					</table>					
+				</td>		
+						
+				<td width="80%" style="padding-left:15px;">		
+					<div class="scroll_1">						
+					<!--主体网页部分-->
+					<h1 id="随笔">随笔</h1>
+						<table border="1" width="100%">
+							<tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="http://www.mdsyshare.club/original.html#Windows%E6%93%8D%E4%BD%9C%E7%9B%B8%E5%85%B3" target="_blank">&#9993;Windows操作相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#Office操作相关" target="_blank">&#9993;Office操作相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#Python学习操作相关" target="_blank">&#9993;Python学习操作相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5(%E6%88%96%E5%88%86%E4%BA%AB)%E7%9B%B8%E5%85%B3" target="_blank">&#9993;网络连接(或分享)相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#Linux操作相关" target="_blank">&#9993;Linux操作相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#Microstation%E7%9B%B8%E5%85%B3" target="_blank">&#9993;Microstation相关</a><br>
+									<a href="http://www.mdsyshare.club/original.html#%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90" target="_blank">&#9993;网络资源</a><br>
+									<a href="http://www.mdsyshare.club/original.html#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%8D%E5%90%8C%E7%94%A8%E6%B3%95" target="_blank">&#9993;常用软件的不同用法</a><br>
+									<h id="personal">&#9760;</h>个人学习笔记：<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/common_sense_learning.html" target="_blank">&#9993;常识类学习笔记</a><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/Javascript_learning.html" target="_blank">&#9993;网页类之Javascript学习笔记</a><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/wrf_learning.html" target="_blank">&#9993;WRF相关学习笔记</a><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/python_learning.html" target="_blank">&#9993;python学习笔记</a><br>
+									<a href="http://www.mdsyshare.club/original.html#%E5%85%B6%E4%BB%96" target="_blank">&#9993;其他</a><br>									
+								</td>
+							</tr>
+						</table>
+					<h1 id="ZNY内网">ZNY内网</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://cms.msdi.cn/main/" target="_blank">&#9993;中南院内网门户</a><br>
+								  <a href="http://zny.msdi.cn/portal" target="_blank">&#9993;综合办公系统</a><br>
+							    <a href="http://biaozhun.msdi.cn/Default.aspx" target="_blank">&#9993;企业标准化信息管理系统---查标准</a><br>
+							    <a href="http://zlf.cqvip.com/" target="_blank">&#9993;维普智立方_资源知识服务-文献</a><br>
+							    <a href="http://bim.msdi.cn/" target="_blank">&#9993;中南院BIM Online(中南院BIM在线学习平台)</a><br>
+							    <a href="https://file.msdi.cn/" target="_blank">&#9993;中南院文档协同工具(中南院seafile)</a><br>
+							    <a href="http://zq.bookan.com.cn/?t=index&amp;id=21705" target="_blank">&#9993;中南院电子书屋</a><br>	
+							    <a href="http://10.219.8.122/msdioffice/msdioffice/index.php/home/show" target="_blank">&#9993;办公室管理--相当于可搜索的通讯录</a><br>	
+							    <a href="http://kq.msdi.cn/" target="_blank">&#9993;考勤管理</a><br>
+							    <a href="http://st.msdi.cn:8081/Dining_MenuDisplay?diningType=Lunch&amp;menuDate=09%2F28%2F2019%2000%3A00%3A00" target="_blank">&#9993;食堂在线之今日菜单</a><br>								   
+							    <a href="https://file.msdi.cn/" target="_blank">&#9993;中南院文档协同工具</a><br>
+							    <a href="http://cms.msdi.cn/gltxwj/1067_1.list" target="_blank">&#9993;文件附件等下载中南勘测设计研究院有限公司,管理体系文件专栏</a><br>
+							    <a href="http://oa.msdi.cn/?s=mbdb" target="_blank">&#9993;中南院目标督办管理系统</a><br>
+					  		</td>
+							</tr>
+					  </tbody></table>
+					<h1 id="video">video</h1>	
+						<table border="1" width="100%">	 
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;"> 
+									<h id="brackets">【电影、电视剧、动漫、综艺等优选网站】</h><br>
+									&#8195;<a href="http://www.goudaitv.com/" target="_blank">&#9993;狗带TV</a><br>
+										&#8195;&#8195;&#8195;<q>整合了全网视频资源,包括全网VIP视频资源等</q><br>	
+									&#8195;<a href="http://www.ckck.tv/" target="_blank">&#9993;CK免费电影</a><br>  
+								  	&#8195;&#8195;&#8195;<q>2017最新电影最新电视剧西瓜影音百度影音,电视剧,卡通片,综艺,体育世界,纪录片等高清电影在线免费观看</q><br>	
+									&#8195;<a href="http://www.74hy.com/" target="_blank">&#9993;骑士电影</a><br>
+										&#8195;&#8195;&#8195;<q>骑士电影，因电影而相聚，全力支持在线云点播，无需安装播放器，超快缓冲，免费观看！</q><br>
+									&#8195;<a href="http://www.tuhao13.com/" target="_blank">&#9993;土豪网</a><br> 
+								  	&#8195;&#8195;&#8195;<q>土豪网专注于最新电影的分享,迅雷电影下载,百度网盘资源,磁力下载,电视剧等热门电影以及最新电影在线免费观看</q><br>
+								  <h id="brackets">【电视直播网】</h><br>
+								  &#8195;<a href="http://www.icantv.cn/" target="_blank">&#9993;爱看TV</a><br> 
+								  	&#8195;&#8195;&#8195;<q>爱看TV是高清电视直播平台,集直播回放于一身.能够在线收看高清CCTV、卫视、体育、少儿、财经等节目,更有全国各县市级电视台,播放流畅,完全免费.</q><br>
+								  &#8195;<a href="http://www.nettv.live/" target="_blank">&#9993;NetTV.Live全球网络电视在线直播</a><br>
+								  	&#8195;&#8195;&#8195;<q>NetTV.Live全球网络电视直播网是一个可以在线收看来自全球200多个国家和地区的电视直播服务平台,帮助异乡的朋友随时了解家乡的变化!致力于打造全网最全的网络电视直播</q><br>
+								  &#8195;<a href="http://hdtv.neu6.edu.cn/" target="_blank">&#9993;东北大学视频直播站</a><br>
+								  	&#8195;&#8195;&#8195;<q>此为IPv6测试站，教育网内用户看电视直播与电视回放的绝佳网站</q><br>
+								  <h id="brackets">【教育、科普、纪录片】</h><br>
+								  &#8195;<a href="https://www.ted.com/" target="_blank">&#9993;TED: Ideas worth spreading</a><br>
+								  	&#8195;&#8195;&#8195;<q></q><br>
+								  &#8195;<a href="https://sub.kamigami.org/" target="_blank">&#9993;纪录片仓库–诸神字幕组</a><br>
+								  	&#8195;&#8195;&#8195;<q></q><br>
+								  &#8195;<a href="http://hdtv.neu6.edu.cn/time-select?p=cctv9" target="_blank">&#9993;CCTV-9纪录</a><br>
+								  	&#8195;&#8195;&#8195;<q></q><br>
+								  <h id="brackets">【影评】</h><br>
+								  &#8195;<a href="https://www.rottentomatoes.com/" target="_blank">&#9993;烂番茄影评</a><br>
+								  	&#8195;&#8195;&#8195;<q></q><br>
+								  <h id="brackets">【其他】</h><br>
+								  &#8195;<a href="http://www.yibuyy.com/" target="_blank">&#9993;一部影院</a><br>
+										&#8195;&#8195;&#8195;<q>听说你总是找不到资源，让一部影院帮帮你吧，一部影院微信yibuboss，最好用的手机影院！</q><br>	
+								  &#8195;<a href="http://www.ccidyy.com/" target="_blank">&#9993;爱电影院</a><br>      
+								  	&#8195;&#8195;&#8195;<q></q><br>  
+							    &#8195;<a href="https://www.bilibili.com/" target="_blank">&#9993;哔哩哔哩</a><br>
+							    	&#8195;&#8195;&#8195;<q>bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐?</q><br>
+							    &#8195;<a href="http://www.iqiyi.com/" target="_blank">&#9993;爱奇艺</a><br>
+							    	&#8195;&#8195;&#8195;<q></q><br>
+							    &#8195;<a href="http://tv.cntv.cn/pindao/" target="_blank">&#9993;电视频道_央视网</a><br>
+							    	&#8195;&#8195;&#8195;<q></q><br>
+							    &#8195;<a href="http://www.hao123.com/video" target="_blank">&#9993;国内视频网站汇总</a><br>
+							    	&#8195;&#8195;&#8195;<q></q><br>							    
+							    &#8195;<br>   						    
+							    &#8195;<a href="http://tv.byr.cn/desktop/" target="_blank">&#9993;北京邮电大学IPTV</a><br>
+							    &#8195;<a href="http://www.bt6080.com/" target="_blank">&#9993;BT6080电影(12306)</a><br>
+							    &#8195;<a href="http://92kanba.com/" target="_blank">&#9993;看吧影视</a><br>		
+							    &#8195;<a href="https://neets.cc/" target="_blank">&#9993;Neets首页_你的私人追剧管家</a><br>
+							    &#8195;<a href="https://www.bd-film.cc/" target="_blank">&#9993;BD影视分享 - 最新高清电影资源免费下载</a><br>	
+							    &#8195;<a href="https://www.pianku.li/" target="_blank">&#9993;片库-全网高清影视聚合下载</a><br>		
+							    &#8195;<a href="https://www.8bazi.com/" target="_blank">&#9993;扛把子影院</a><br>					    			    						    
+					  		</td>
+							</tr>
+					  </tbody></table>
+					<h1 id="news">news</h1>	
+						<table border="1" width="100%">	
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">		
+									<a href="https://v2.alapi.cn/api/zaobao?token=EP3bPwSQCgxKM1CU&format=image" target="_blank">&#9993;每天60秒读懂世界</a><br>
+									<a href="https://s.weibo.com/top/summary/" target="_blank">&#9993;微博热搜</a><br>
+									<a href="https://www.zhihu.com/" target="_blank">&#9993;首页-知乎</a><br>
+									<a href="https://www.cbnweek.com/" target="_blank">&#9993;第一财经杂志</a><br>															 
+							    <a href="https://www.toutiao.com/" target="_blank">&#9993;今日头条</a><br>
+							    <a href="http://www.jiemian.com/" target="_blank">&#9993;界面新闻</a><br> 
+							    <a href="http://www.newsweek.com/" target="_blank">&#9993;Newsweek(新闻周刊)</a><br> 
+							    <a href="http://www.bbc.com/" target="_blank">&#9993;BBC-Homepage</a><br> 
+							    <a href="http://www.xinhuanet.com/english/" target="_blank">&#9993;新华网英文版</a><br>
+							    <a href="http://www.ftchinese.com/" target="_blank">&#9993;FT中文网</a><br> 
+							    	&#8195;&#8195;<q>FT中文网是英国《金融时报》唯一的非英语网站,致力于向中国商业菁英和企业决策者及时提供来自全球的商业、经济、市场、管理和科技新闻,同时报道和评论对中国经济和...</q><br>
+					  		</td>
+							</tr>
+					  </tbody></table>   
+					<h1 id="music">music</h1>	
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://music.163.com/#" target="_blank">&#9993;网易云音乐</a><br>								  
+							    <a href="https://www.yahoo.com/music/" target="_blank">&#9993;Yahoo Music</a><br>
+							    <a href="https://www.yahoo.com/music/tagged/the-voice/" target="_blank">&#9993;The Voice|Yahoo Music</a><br>
+							    <a href="http://www.9ku.com/" target="_blank">&#9993;九酷音乐网|好听的歌|网络歌曲|dj舞曲|流行歌曲大全</a><br>								  
+					 			</td>
+							</tr>
+					  </tbody></table>
+					<h1 id="玩社交">玩社交</h1>	
+						<table border="1" width="100%">	
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="https://mp.weixin.qq.com/" target="_blank">&#9993;微信公众平台</a><br>
+							    <a href="http://weibo.com/" target="_blank">&#9993;新浪微博</a><br>          
+							    <a href="http://bbs.tianya.cn/" target="_blank">&#9993;天涯论坛</a><br> 
+							    <a href="http://t.qq.com/" target="_blank">&#9993;腾讯微博</a><br> 
+					  		</td>
+							</tr>
+					  </tbody></table>    
+					<h1 id="乐搞笑">乐搞笑</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="https://www.xiaohuayoumo.com/" target="_blank">&#9993;笑话幽默</a><br>
+								  <a href="http://so.iqiyi.com/so/q_%E7%AC%91%E9%9C%B8%E6%9D%A5%E4%BA%862015?source=hot&amp;sr=1271866493577" target="_blank">&#9993;笑霸来了</a><br>
+							    <a href="http://www.qiushibaike.com/hot/" target="_blank">&#9993;糗事百科</a><br>
+							    <a href="http://www.iqiyi.com/lib/m_207630914.html?src=search" target="_blank">&#9993;笑囧一族</a><br>							    
+					  		</td>
+							</tr>
+					  </tbody></table>
+					<h1 id="资源与模板">资源与模板</h1>	
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="https://github.com/wbunle/PersonalShare/tree/master/Kindle%20Books" target="_blank">&#9993;kindle电子书免费下载</a><br>								    
+							    <a href="http://www.officeplus.cn/Template/Home.shtml" target="_blank">&#9993;Office官方在线模板网</a><br>
+							    <a href="http://3png.com/" target="_blank">&#9993;三元素3png</a><br>
+							    <a href="http://www.tretars.com/" target="_blank">&#9993;逼格PPT</a><br>
+							    <a href="http://www.iconfont.cn/plus/home/index?spm=a313x.7781069.1998910419.2.LyxYw8" target="_blank">&#9993;Iconfont-阿里巴巴矢量图标库</a><br>
+							    <a href="http://www.wallpaperfx.com/" target="_blank">&#9993;HD Wallpapers-高清壁纸</a><br>
+							    <a href="http://tampermonkey.net/scripts.php" target="_blank">&#9993;Tampermonkey-用户脚本源</a><br>
+							    <a href="http://www.glzy8.com/zt/excel/dl735.html" target="_blank">&#9993;神奇万年历_管理资源吧</a><br>
+							    <a href="http://www.zhutizhijia.net/pingbao/?zhuti" target="_blank">&#9993;屏幕保护_主题之家</a><br>
+							    <a href="http://dl.3dmgame.com/hj/wallpaperengine/" target="_blank">&#9993;wallpaper engine壁纸合集</a><br>
+									<a href="http://www.3dmgame.com/gl/201612/3619805_6.html" target="_blank">&#9993;wallpaper engine应用壁纸</a><br>
+									<a href="http://mirrors.163.com/" target="_blank">&#9993;网易开源镜像站</a><br>
+									<a href="http://www.hejizhan.com/bbs/" target="_blank">&#9993;万千合集站（书籍免费下载）</a><br>
+									<a href="http://www.dv58.com/portal.php" target="_blank">&#9993;会声会影模板</a><br>
+									<a href="http://bt.neu6.edu.cn/" target="_blank">&#9993;六维空间</a><br>	
+									<a href="https://www.drvsky.com/" target="_blank">&#9993;驱动天空-专业、方便的驱动下载站</a><br>
+									<a href="https://3dwarehouse.sketchup.com/" target="_blank">&#9993; 3D Warehouse（3维模型组件）</a><br>	
+									<a href="https://greasyfork.org/zh-CN" target="_blank">&#9993;Greasy Fork-安全、实用的用户脚本大全(建议与tampermonkey结合使用)</a><br>
+									<a href="https://www.wenku1.net/" target="_blank">&#9993;第一文库网</a><br>	
+									<a href="http://www.awditu.com/" target="_blank">&#9993;奥维地图加载最新卫星地图</a><br>	
+									<a href="http://www.cebpubservice.com/" target="_blank">&#9993;中国招标投标公共服务平台</a><br>
+									<a href="http://gjkj.mwr.gov.cn/jsjd1/bzcx/" target="_blank">&#9993;水利行业标准查询(免费公开)</a><br>						
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="自学">自学</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://oeasy.org/" target="_blank">&#9993;oeasy，会玩才会学</a><br>
+							    <a href="http://www.cfan.com.cn/" target="_blank">&#9993;电脑爱好者</a><br>
+							    <a href="https://bentley-learn.com/index" target="_blank">&#9993;BENTLEY软件-官方教学</a><br>
+							    <a href="http://www.xitongzhijia.net/xtjc/" target="_blank">&#9993;系统之家系统教程</a><br>
+							    <a href="http://www.csdn.net/" target="_blank">&#9993;CSDN首页</a><br>
+							    <a href="http://www.xitongzhijia.net/xtjc/win7/" target="_blank">&#9993;w7教程--系统之家</a><br>
+							    <a href="http://www.51zxw.net/" target="_blank">&#9993;我要自学</a><br>
+							    <a href="http://novel.tingroom.com/" target="_blank">&#9993;中英双语小说网</a><br>
+							    <a href="http://os.51cto.com/col/176/" target="_blank">&#9993;Windows客户端优化与技巧</a><br>
+							    <a href="http://www.dngsos.com/dngsdnjc/" target="_blank">&#9993;电脑公司文章教程_Windows系统教程</a><br>
+							    <a href="https://www.zhihu.com/question/28661987" target="_blank">&#9993;用python写过哪些有趣的脚本</a><br>
+							    <a href="http://www.woaidiannao.com/" target="_blank">&#9993;我爱电脑网</a><br>
+							    <a href="http://www.vxia.net/page/2" target="_blank">&#9993;微夏博客网</a><br>							    
+							    <a href="http://www.jianshu.com/" target="_blank">&#9993;简书-创作你的创作</a><br>            
+							    <a href="http://v.dxsbb.com/" target="_blank">&#9993;大学生我要自学网视频教程</a><br>
+							    <a href="https://www.windows10.pro/" target="_blank">&#9993;教你玩转Win10系统</a><br>       
+							    <a href="https://www.softether.org/" target="_blank">&#9993;SoftEther VPN Project</a><br>
+							    <a href="http://www.w3school.com.cn/" target="_blank">&#9993;网页制作学习中文网</a><br>
+							    <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">&#9993;网页制作学习英文网</a><br>
+							    <a href="http://www.cnblogs.com/glaivelee/archive/2009/10/07/1578737.html" target="_blank">&#9993;批处理学习<br>
+							    <br>
+							    <br>
+							    </a><a href="http://www.cnblogs.com/grapeot/archive/2010/02/22/1670822.html" target="_blank">&#9993;不一样的命令行–Windows PowerShell简介</a><br>
+							    <a href="http://doc.scrapy.org/en/latest/intro/tutorial.html" target="_blank">&#9993;（python学习模块）</a><br>
+							    <a href="http://www.cnblogs.com/kallan/p/5160017.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank">&#9993;基于Python的Grib数据可视化</a><br>
+							    <a href="http://blog.csdn.net/column/details/why-bug.html" target="_blank">&#9993;python学习入门教程</a><br>
+							    <a href="http://blog.csdn.net/yelbosh/article/details/7518506" target="_blank">&#9993;setuptools</a><br>
+							    <a href="http://data.cma.cn/" target="_blank">&#9993;中国气象数据网</a><br>
+							    <a href="http://jingyan.baidu.com/album/fb48e8be52f3166e622e1400.html?picindex=8" target="_blank">&#9993;python怎么使用ez_setup.py</a><br>
+							    <a href="http://cuiqingcai.com/1052.html" target="_blank">&#9993;python学习学习系列教程 | 静觅</a><br>
+							    <a href="http://www.cnblogs.com/lanxuezaipiao/p/3543658.html" target="_blank">&#9993;优秀Python学习资源收集汇总</a><br>
+							    <a href="http://blog.csdn.net/shuaishuai3409/article/details/51428106" target="_blank">&#9993;python用箱型图进行异常值检测</a><br>
+							    <a href="http://blog.itpub.net/12199764/viewspace-1743145/" target="_blank">&#9993;用python的numpy作拟合</a><br>
+							    <a href="http://blog.sina.com.cn/s/blog_b3a4f3f80102v11a.html" target="_blank">&#9993;python读取excel中的中文(带空格)</a><br>
+							    <a href="http://blog.csdn.net/chenggong2dm/article/details/44956805" target="_blank">&#9993;python读取excel</a><br>
+							    <a href="http://www.2cto.com/kf/201312/262671.html" target="_blank">&#9993;Python将txt文件里的字典类型的数据写到Excel中</a><br>
+							    <a href="http://blog.sina.com.cn/s/blog_54b09dc90102vfms.html" target="_blank">&#9993;中文输出</a><br>
+							    <a href="http://bookshadow.com/weblog/2014/10/12/how-to-create-windows-executable-exe-from-python-script/" target="_blank">&#9993;Python脚本如何生成Windows可执行文件</a><br>
+							    <a href="http://www.jianshu.com/p/5a59b6985346" target="_blank">&#9993;pyinstaller-3步即可将你的py文件转成exe格式</a><br>
+							    <a href="http://www.dreamenglish.com/englishkidsvideo" target="_blank">&#9993;Learn English Kids Videos Watch Online</a><br>
+							    <a href="https://www.linuxdaxue.com/" target="_blank">&#9993;Linux大学</a><br>
+							    <a href="http://v.ku6.com/show/5_hjXqn8zg33z0LnH-d2BA...html" target="_blank">&#9993;会声会影X5入门教程</a><br>		
+							    <a href="http://www.51cie.net/index.aspx" target="_blank">&#9993;微软365学院</a><br>							    	
+							    <a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank">&#9993;Python3 教程 | 菜鸟教程</a><br>	
+							    <a href="https://docs.python.org/zh-cn/3.7/tutorial/index.html" target="_blank">&#9993;Python 教程 — Python 3.7.5 文档</a><br>
+							    <a href="https://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">&#9993;正则表达式 – 教程 | 菜鸟教程</a><br>
+							    <a href="https://docs.anaconda.com/anaconda/user-guide/getting-started/" target="_blank">&#9993;Getting started with Anaconda — Anaconda documentation</a><br>	  
+							    <a href="https://bentley-learn.com/page/1836549?navIndex=0" target="_blank">&#9993;BENTLEY软件-官方教学</a><br>
+							    <br>							
+							    <h id="personal">&#9760;</h>个人学习笔记：<br>
+							    &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/common_sense_learning.html" target="_blank">&#9993;常识类学习笔记</a><br>
+							    &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/Javascript_learning.html" target="_blank">&#9993;网页类之Javascript学习笔记</a><br>
+									  &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/wrf_learning.html" target="_blank">&#9993;WRF相关学习笔记</a><br>
+											&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mdsyshare.club/python_learning.html" target="_blank">&#9993;python学习笔记</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="系统相关">系统相关</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://www.xitongzhijia.net/soft/?gengduoruanjian" target="_blank">&#9993;系统之家</a><br>
+							    <a href="http://www.itellyou.cn/" target="_blank">&#9993;I tell you</a><br>
+							    <a href="http://www.tudoupe.com/" target="_blank">&#9993;ghost系统下载</a><br>
+							    <a href="http://tech.sina.com.cn/down/" target="_blank">&#9993;新浪软件下载</a><br>
+							    <a href="http://www.appinn.com/" target="_blank">&#9993;小众软件</a><br>
+							    <a href="http://www.qiuquan.cc/" target="_blank">&#9993;精品软件分享博客(绿化、精简与打包)</a><br>
+							    <a href="http://www.xp510.com/" target="_blank">&#9993;XP系统之家</a><br>
+							    <a href="http://www.aichunjing.com/" target="_blank">&#9993;纯净版系统_Win10纯净版64位_纯净版XP系统-爱纯净官网</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="阅读">阅读</h1>	
+						<table border="1" width="100%">	
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="http://zq.bookan.com.cn/?t=index&amp;id=21705" target="_blank">&#9993;中南院电子书屋</a><br>							    
+							    <a href="http://hbdldx.dooland.com/site/" target="_blank">&#9993;读览天下</a><br>
+							    <a href="http://bbs.tianya.cn/" target="_blank">&#9993;天涯论坛</a><br>
+							    <a href="http://www.csdn.net/" target="_blank">&#9993;CSDN全球最大中文IT社区</a><br>
+							    <a href="https://www.inoreader.com/" target="_blank">&#9993;Inoreader</a><br>
+							    <a href="https://www.lrts.me/index" target="_blank">&#9993;懒人听书</a><br>
+							    <a href="https://huanqiukexue.com/" target="_blank">&#9993;《环球科学》（“科学美国人”中文版）【唯一官方网站】</a><br>	
+							    <a href="https://www.amazon.cn/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.cn%2Fmn%2Fdcw%2Fmyx.html&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=cnamazon&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;&amp;accountStatusPolicy=P1#/home/content/booksAll/dateDsc/" target="_blank">&#9993;Amazon管理内容和设备</a><br>						    							    
+							    <a href="http://www.slsdgc.com.cn/" target="_blank">&#9993;中国水利水电工程网</a><br>
+							    <a href="http://www.tcmap.com.cn/" target="_blank">&#9993;中华地名网_中华行政区划网(博雅地名分享网)</a><br>
+							    <a href="https://www.allhistory.com/" target="_blank">&#9993;全历史</a><br>	
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="工具">工具</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="https://www.collinsdictionary.com/zh/dictionary/english" target="_blank">&#9993;Collins英语词典</a><br>
+								  <a href="http://dict.youdao.com/" target="_blank">&#9993;有道首页</a><br>
+								  <a href="http://dazi.kukuw.com/" target="_blank">&#9993;在线打字测试</a><br>
+							    <a href="http://www.iciba.com/" target="_blank">&#9993;在线翻译_爱词霸英语</a><br>
+							    <a href="http://ip.chinaz.com/" target="_blank">&#9993;IP地址查询</a><br>
+							    <a href="http://www.speedtest.net/" target="_blank">&#9993;网速测试</a><br>
+							    <a href="https://www.virustotal.com/zh-cn/" target="_blank">&#9993;多引擎在线病毒扫描网</a><br>							   
+							    <a href="http://ipv6-test.com/" target="_blank">&#9993;IPv6 test</a><br>
+							    <a href="http://test-ipv6.com/" target="_blank">&#9993;IPv6 测试</a><br>
+							    <a href="http://hao.199it.com/" target="_blank">&#9993;大数据导航</a><br>
+							    <a href="http://cn.bing.com/?FORM=MO0027" target="_blank">&#9993;微软必应搜索</a><br>
+							    <a href="https://g.l3l.bid/" target="_blank">&#9993;好搜索</a><br>
+							    <a href="https://smallpdf.com/cn/pdf-to-jpg" target="_blank">&#9993;PDF转JPG</a><br>
+							    <a href="http://word.baidu.com/" target="_blank">&#9993;word转微信公众平台文章</a><br>
+							    <a href="https://drp.su/en/laptops/teclast/tbook-16-pro?os=windows-10-x64" target="_blank">&#9993;驱动下载</a><br>
+							    <a href="http://www.teclast.com/tools/pad/pad.php" target="_blank">&#9993;台电科技固件下载</a><br>
+							    <a href="https://pan.baidu.com/s/1jHW2k54#list/path=%2F" target="_blank">&#9993;台电固件下载 网盘</a><br>
+							    <a href="https://mtj.baidu.com/data/mobile/profile/" target="_blank">&#9993;流量研究院</a><br>
+							    <a href="http://www.iqshw.com/url/" target="_blank">&#9993;迅雷快车旋风下载地址在线转换</a><br>
+							    <a href="http://pan.baidu.com/disk/home?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;&amp;bduss=&amp;ssnerror=0#list/path=%2F&amp;vmode=list" target="_blank">&#9993;百度网盘</a><br>
+							    <a href="http://www.bitbug.net/" target="_blank">&#9993;制作ico图标</a><br>
+							    <a href="http://worldbirthsanddeaths.com/" target="_blank">&#9993;World Birth and Death Rates</a><br>
+							    <a href="http://index.baidu.com/?tpl=trend&amp;type=0&amp;area=0&amp;time=13&amp;word=dedecms%2CPHPCMS" target="_blank">&#9993;百度指数</a><br>
+							    <a href="https://www.forbes.com/billionaires/list/#version:static" target="_blank">&#9993;The World Billionaires List (real time)</a><br>
+							    <a href="https://gsnedders.html5.org/outliner/" target="_blank">&#9993;查看网页大纲视图</a><br>
+							    <a href="https://wikileaks.org/" target="_blank">&#9993;WikiLeaks</a><br>
+							    <a href="https://cli.im/" target="_blank">&#9993;二维码生成器</a><br>
+							    <a href="http://keepvid.com/" target="_blank">&#9993;Download Online Videos</a><br>
+							    <a href="https://wanwang.aliyun.com/" target="_blank">&#9993;域名注册_阿里云旗下品牌</a><br>
+							    <a href="https://cn.bing.com/" target="_blank">&#9993;微软Bing搜索</a><br>
+							    <a href="https://zh.wikihow.com/%E9%A6%96%E9%A1%B5" target="_blank">&#9993;wikiHow</a><br>
+							    <a href="https://wanwang.aliyun.com/hosting/free/" target="_blank">&#9993;阿里云虚机促销活动</a><br>
+							    <a href="https://ipcrs.pbccrc.org.cn/" target="_blank">&#9993;个人信用信息服务平台</a><br>
+							    <a href="http://ddelectrotech.com/" target="_blank">&#9993;小发明DDelectro Tech</a><br>
+									<a href="http://www.grabient.com/" target="_blank">&#9993;在线配色网Grabient</a><br>
+									<a href="http://cn.office-converter.com/" target="_blank">&#9993;免费在线文件转换器Office-converter</a><br>
+									<a href="http://processon.com/" target="_blank">&#9993;免费在线作图processon</a><br>
+									<a href="https://witeboard.com/" target="_blank">&#9993;Witeboard-最简单的多人协作</a><br>
+									<a href="https://www.vectorizer.io/" target="_blank">&#9993;Online Image Vectorizer（位图（如jpg）转化为矢量图（如svg））</a><br>
+									<a href="http://www.cnkis.net/" target="_blank">&#9993;中国知网论文查重检测系统入口_最权威安全的查重网站_学术不端网</a><br>
+									<a href="https://products.office.com/zh-cn/office-online/" target="_blank">&#9993;Office Online - 在线编辑 Microsoft Office 文档、电子表格、演示文稿等等</a><br>
+									<a href="http://www.ab126.com/Geography/1883.html" target="_blank">&#9993;经度纬度距离计算器-经纬度距离在线计算-懒人计算器</a><br>
+									<a href="https://miku.tools/?ref=appinn" target="_blank">&#9993;MikuTools - 一个轻量的工具集合</a><br>
+									<a href="http://hao.360.cn/sub/chaxun_website_nav.html" target="_blank">&#9993;实用工具集_360版</a><br>	
+									<a href="http://www.tcmap.com.cn/list/daima_list.html" target="_blank">&#9993;全国各地行政区划代码及身份证号前6位查询</a><br>									
+									<a href="https://www.tianyancha.com/" target="_blank">&#9993;天眼查-商业安全工具_企业信息查询_公司查询_工商查询_企业信用信息系统</a><br>
+									<a href="http://www.changsha.gov.cn/csrc_portal/home/index.shtml" target="_blank">&#9993;长沙市一体化人才服务（租房和生活补贴）</a><br>
+									<a href="https://www.baiduwp.com/" target="_blank">&#9993;PanDownload网页版(下载百度网盘大文件)</a><br>
+									<a href="http://www.ebuymed.cn/" target="_blank">&#9993;百度文库下载券_百度文库免费下载_下载百度文库_百度文库免费下载方法</a><br>
+									<a href="https://cloudconvert.com/" target="_blank">&#9993;convert anything to anything - CloudConvert</a><br>
+									<a href="http://www.csres.com/" target="_blank">&#9993;（查标准规范）查标准上工标网</a><br>
+									<a href="http://www.zjsis.com/" target="_blank">&#9993;（查标准规范）之江标准信息平台-国内外技术法规标准查询网</a><br>		
+									<a href="http://www.12348.gov.cn/#/homepage" target="_blank">&#9993;中国法律服务网</a><br>	
+									<a href="https://communities.bentley.com/communities/other_communities/chinafirst/f" target="_blank">&#9993;论坛 - Bentley 中国优先社区 - Bentley Communities</a><br>														
+									<a href="https://www.wenshushu.cn/" target="_blank">&#9993;(在线收发文件)文叔叔 - 传文件，找文叔叔（大文件、永不限速）</a><br>
+									<a href="http://gotohttp.com/" target="_blank">&#9993;GotoHTTP-在线远程控制平台</a><br>
+									<a href="https://www.wenjuan.com/" target="_blank">&#9993;问卷网-免费问卷调查平台</a><br>
+									<a href="https://www.islide.cc/" target="_blank">&#9993;iSlide-让PPT设计简单起来~|中文官网</a><br>
+									<a href="https://lightpdf.com/zh/" target="_blank">&#9993;LightPDF-免费在线编辑、转换PDF文件</a><br>
+									<a href="https://uzer.me/z/apps" target="_blank">&#9993;UZER.ME--您的云端超级应用空间</a><br>
+									<a href="http://www.html22.com/zh/" target="_blank">&#9993;网页转换助手_文档下载</a><br>
+									<a href="https://ocr.xinhuokj.com/" target="_blank">&#9993;薪火OCR文字识别，在线图片转文字，图片转Excel和word，将纸质文档扫描识别成Word、Excel、PDF</a><br>
+									<a href="https://inv-veri.chinatax.gov.cn/index.html" target="_blank">&#9993;国家税务总局全国增值税发票查验平台</a><br>
+									<a href="https://jingweidu.51240.com/" target="_blank">&#9993;经纬度查询 - 坐标拾取系统</a><br>
+									<a href="http://www.gb688.cn/bzgk/gb/index" target="_blank">&#9993;国家标准全文公开</a><br>
+									<a href="http://www.ccsn.org.cn/" target="_blank">&#9993;国家工程建设标准化信息网</a><br>
+									<a href="http://www.bimfilm.cn/?tdsourcetag=s_pcqq_aiomsg" target="_blank">&#9993;BIM-FILM 专注BIM施工动画</a><br>
+									<a href="https://www.geogebra.org/classic" target="_blank">&#9993;GeoGebra经典</a><br>
+									<a href="http://danwei.xuenb.com/changdu/" target="_blank">&#9993;长度单位换算表-在线长度单位转换器</a><br>
+									<a href="https://www.flash.cn/" target="_blank">&#9993;Flash中心下载-Flash官网</a><br>
+									<a href="https://www.biketo.com/" target="_blank">&#9993;美骑网_自行车门户网站_完美骑行从这里开始！</a><br>
+									<a href="https://www.creditchina.gov.cn/" target="_blank">&#9993;信用中国</a><br>									
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="邮箱">邮箱</h1>	
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="http://email.163.com/" target="_blank">&#9993;网易邮箱</a><br>
+									<a href="https://www.hotmail.com/" target="_blank">&#9993;Windows Live Hotmail</a><br>
+								  <a href="https://mail.qq.com/" target="_blank">&#9993;QQ邮箱</a><br>
+								  <a href="http://10minutemail.com/10MinuteMail/" target="_blank">&#9993;【10分钟临时邮箱】</a><br>
+								  <a href="https://exmail.qq.com/login" target="_blank">&#9993;腾讯企业邮箱-登录入口</a><br>
+								  <!--                      
+							    		<A HREF="http://10minutemail.com/10MinuteMail/" target="_blank">&#9993【临时邮箱】10分钟邮箱</A><br>
+							    --> 
+					  		</td>
+							</tr>
+					  </tbody></table>
+				  <h1 id="学术文章搜索">学术文章搜索</h1>
+					  <table border="1" width="100%">
+					  	<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+							 		<a href="http://www.cnki.net/" target="_blank">&#9993;中国知网</a><br>
+							    <a href="http://www.duxiu.com/?channel=goqw.jsp#" target="_blank">&#9993;读秀</a><br> 
+							    <a href="http://www.changshalib.cn/" target="_blank">&#9993;长沙图书馆</a><br>
+							    <a href="http://zjisa.zjlib.cn/home/zy_home.jsp" target="_blank">&#9993;浙江省公共图书馆资源服务门户</a><br> 
+							    <a href="http://zlf.cqvip.com/" target="_blank">&#9993;维普智立方_资源知识服务-文献</a><br>            
+							    <a href="http://scholar.chongbuluo.com/" target="_blank">&#9993;虫部落</a><br>
+							    <a href="http://xueshu.baidu.com/" target="_blank">&#9993;百度学术</a><br>
+							    <a href="http://www.blyun.com/" target="_blank">&#9993;百链</a><br>
+							    <a href="http://g.wanfangdata.com.cn/" target="_blank">&#9993;万方</a><br>
+							    <a href="https://www.cn-ki.net/" target="_blank">&#9993;iData知识搜索(知网镜像)</a><br>
+							    <a href="http://www.ucdrs.superlib.net/" target="_blank">&#9993;全国图书馆参考咨询联盟_和某些网页扩展程序一起使用，你会发现不一样的世界</a><br>
+							    <a href="http://www.ly.superlib.net/" target="_blank">&#9993;龙岩网络图书馆_和某些网页扩展程序一起使用，你会发现不一样的世界</a><br>
+							    <a href="https://www.xueshu86.com/" target="_blank">&#9993;互助联盟（低价买图书电子版）</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="论文相关">论文相关</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://sciencechina.cn/" target="_blank">&#9993;中国科学文献服务系统</a><br>
+							    <a href="http://cssci.nju.edu.cn/index.html" target="_blank">&#9993;中国社会科学引文索引</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="好文章">好文章</h1>	
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="http://www.mdsyshare.club/studyGoodArticle/CMD%E6%88%96%E8%80%85%E8%AF%B4DOS%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0.htm" target="_blank">&#9993;CMD或者说DOS命令学习</a><br>
+									<a href="http://www.mdsyshare.club/studyGoodArticle/Geogebra%E6%8C%87%E4%BB%A4%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AF%B9%E7%85%A7%E6%9F%A5%E8%AF%A2.html" target="_blank">&#9993;Geogebra指令中英文对照查询</a><br>
+									<a href="http://dsk.ippt.pan.pl/docs/abaqus/v6.13/index.html" target="_blank">&#9993;ABAQUS Document</a><br>						
+									<a href="https://view.officeapps.live.com/op/embed.aspx?src=http%3A%2F%2Fwww%2Emdsyshare%2Eclub%3A80%2FstudyGoodArticle%2FTypical%5FGeneral%5FComputing%5FBook%2Exlsx&wdAllowInteractivity=False&AllowTyping=True&wdInConfigurator=True&wdInConfigurator=True" target="_blank">&#9993;通用计算书</a><br>
+									<a href="http://www.360doc.com/content/20/0322/09/59514121_900891706.shtml" target="_blank">&#9993;审计案例/资料汇编340篇</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="购物">购物</h1>	
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+								  <a href="http://www.kiees.com/" target="_blank">&#9993;发现值得买</a><br>
+							    <a href="http://www.cn-yinxing.com/" target="_blank">&#9993;网购小道消息</a><br>
+							    <a href="http://www.quanmama.com/" target="_blank">&#9993;券妈妈优惠券网</a><br>
+							    <a href="https://www.1688.com/" target="_blank">&#9993;阿里巴巴1688.com批发网</a><br>
+							    <a href="https://www.taobao.com/?spm=a230r.1.1581860521.1.23HUIS" target="_blank">&#9993;淘宝网</a><br>            
+							    <a href="https://www.jd.com/" target="_blank">&#9993;京东</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="资源搜索">资源搜索</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+							    <a href="http://www.baiduyunpan.com/" target="_blank">&#9993;百度网盘资源搜索</a><br>
+							    <a href="http://vdisk.weibo.com/" target="_blank">&#9993;微盘</a><br>	        
+									<!--
+									  <A HREF="http://www.offcn.com/gjgwy/kslc/"  target="_blank">&#9993国家公务员考试流程</A><br>
+							      <A HREF="http://bm.scs.gov.cn/2017/UserControl/Student/StudentIndex.aspx" target="_blank">&#9993国家公务员考试录用系统</A><br>
+							      <A HREF="http://www.mohrss.gov.cn/" target="_blank">&#9993中华人民共和国人力资源和社会保障网</A><br>
+							      <A HREF="http://www.scs.gov.cn/" target="_blank">&#9993国家公务员局</A><br>
+							      <A HREF="http://www.gov.cn/"  target="_blank">&#9993中国政府网_中央人民政府门户网站</A><br>
+							      <A HREF="http://www.people.com.cn/"  target="_blank">&#9993人民网_网上的人民日报</A><br>
+							      <A HREF="http://www.xinhuanet.com/"  target="_blank">&#9993新华网_让新闻离你更近</A><br>
+							      <A HREF="http://www.china.com.cn/"  target="_blank">&#9993中国网--网上中国</A><br>
+							      <A HREF="http://www.cyol.net/"  target="_blank">&#9993中青在线</A><br>
+							      <A HREF="http://www.sina.com.cn/"  target="_blank">&#9993新浪首页</A><br>
+							      <A HREF="http://www.sohu.com/"  target="_blank">&#9993搜狐</A><br>
+							      <A HREF="http://www.163.com/"  target="_blank">&#9993网易</A><br>
+							      <A HREF="http://www.china.com/"  target="_blank">&#9993中华网</A><br>
+							      <A HREF="http://www.eol.cn/"  target="_blank">&#9993中国教育在线-中国最大的教育门户网站</A><br>
+							      <A HREF="http://gongwuyuan.eol.cn/" target="_blank">&#9993'2018国家公务员考试-中国教育在线</A><br>
+							      <A HREF="http://www.offcn.com/gjgwy/2016/1013/29196.html"  target="_blank">&#9993'2017国家公务员考试报名入口</A><br>
+							      <A HREF="http://www.offcn.com/gjgwy/2016/1013/29192_2.html"  target="_blank">&#9993'2017国家公务员考试公告</A><br>
+							      <A HREF="http://jl.offcn.com/zg/2017gksxs/"  target="_blank">&#9993'2018国家公务员考试_免费领取2018国考课_中公教育</A><br>
+							      <H3>省级</H3>
+							          <A HREF="http://www.hnmsw.com/"  target="_blank">&#9993湖南民生网</A><br>
+							          <A HREF="http://www.hnwr.gov.cn/" target="_blank">&#9993湖南省水利厅</A><br>
+							          <A HREF="http://www.hunanpta.com/Index.do" target="_blank">&#9993湖南人事考试网</A><br>
+							          <A HREF="http://www.hnrst.gov.cn/" target="_blank">&#9993湖南省人力资源和社会保障网</A><br>
+							          <A HREF="http://bm.hnrcsc.com/bm/"  target="_blank">&#9993考试报名动态一览</A><br>
+							          <A HREF="http://www.csks.gov.cn/" target="_blank">&#9993长沙考试网</A><br>
+							          <A HREF="http://www1.zjj.gov.cn/govmach/rsks/" target="_blank">&#9993张家界市人事考试中心</A><br>
+							          <A HREF="http://rsj.xxz.gov.cn/" target="_blank">&#9993湘西州人力资源和社会保障局</A><br>
+							    -->
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="我的视频">我的视频</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="https://www.bilibili.com/video/av16774335/" target="_blank">&#9993;水工重力坝坝踵应力分析微课堂</a><br>
+							    <a href="https://www.bilibili.com/video/av16774800/" target="_blank">&#9993;陈英、范美刚之幸福的两个人</a><br>
+							    <a href="https://www.bilibili.com/video/av16774143/" target="_blank">&#9993;陈英、范美刚之我们结婚吧</a><br>	
+								</td>
+							</tr>
+						</tbody></table>
+					<h1 id="我的相册">我的相册</h1>
+						<table border="1" width="100%">
+							<tbody><tr>								
+								<td style="line-height:25px;padding-top:3px;padding-left:8px;">
+									<a href="http://www.mdsyshare.club/file/album/FamilyHarmony/FamilyHarmony.html" target="_blank">&#9993;家和万事兴</a><br>	
+									<a href="http://www.mdsyshare.club/Times.html" target="_blank">&#9993;浏览器桌面</a><br>
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+						
+						<!--问题：重大bug：占位符的大小不知(1350为table滚动面板的高度，那么不管以后怎样增减表格"文字量"，都可达到这个要求？自：对)
+						(以下table起到占位符的作用);且需“页面加载完毕滚动条延时自动置于顶部”的配合-->
+						<table border="0">
+							<tbody><tr height="1350">
+								<td></td>
+							</tr>
+						</tbody></table>
+																		
+					</div>						
+				</td>				
+			</tr>
+		</tbody></table>
+		<br>
+		
+		<!--背景音乐放在最后（暂时取消）
+		<h1>I love U</h1>
+				<audio src="http://oeasy.org/music/iloveu.mp3" controls  preload="none"></audio><br>	
+		-->		
+	
+	
+</body>
+<div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div>
+</html>
