@@ -1,30 +1,30 @@
 function startTime()     
 {     
-    var today=new Date();//¶¨ÒåÈÕÆÚ¶ÔÏó     
-    var YY = today.getFullYear();//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetFullYear()·½·¨·µ»ØÄê      
-    var MM = today.getMonth()+1;//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetMonth()·½·¨·µ»ØÔÂ      
-    var DD = today.getDate();//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetDate()·½·¨·µ»ØÈÕ       
-    var HH=today.getHours();//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetHours·½·¨·µ»ØĞ¡Ê±     
-    var MI=today.getMinutes();//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetMinutes·½·¨·µ»Ø·ÖÖÓ     
-    var SS=today.getSeconds();//Í¨¹ıÈÕÆÚ¶ÔÏóµÄgetSeconds·½·¨·µ»ØÃë     
-    // Èç¹û·ÖÖÓ»òĞ¡Ê±µÄÖµĞ¡ÓÚ10£¬ÔòÔÚÆäÖµÇ°¼Ó0£¬±ÈÈçÈç¹ûÊ±¼äÊÇÏÂÎç3µã20·Ö9ÃëµÄ»°£¬ÔòÏÔÊ¾15£º20£º09     
+    var today=new Date();//å®šä¹‰æ—¥æœŸå¯¹è±¡     
+    var YY = today.getFullYear();//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getFullYear()æ–¹æ³•è¿”å›å¹´      
+    var MM = today.getMonth()+1;//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getMonth()æ–¹æ³•è¿”å›æœˆ      
+    var DD = today.getDate();//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getDate()æ–¹æ³•è¿”å›æ—¥       
+    var HH=today.getHours();//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getHoursæ–¹æ³•è¿”å›å°æ—¶     
+    var MI=today.getMinutes();//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getMinutesæ–¹æ³•è¿”å›åˆ†é’Ÿ     
+    var SS=today.getSeconds();//é€šè¿‡æ—¥æœŸå¯¹è±¡çš„getSecondsæ–¹æ³•è¿”å›ç§’     
+    // å¦‚æœåˆ†é’Ÿæˆ–å°æ—¶çš„å€¼å°äº10ï¼Œåˆ™åœ¨å…¶å€¼å‰åŠ 0ï¼Œæ¯”å¦‚å¦‚æœæ—¶é—´æ˜¯ä¸‹åˆ3ç‚¹20åˆ†9ç§’çš„è¯ï¼Œåˆ™æ˜¾ç¤º15ï¼š20ï¼š09     
     MM=checkTime(MM);  
     DD=checkTime(DD); 
     HH=checkTime(HH);
     MI=checkTime(MI);     
     SS=checkTime(SS);      
-    var WW; //ÓÃÓÚ±£´æĞÇÆÚ£¨getDay()·½·¨µÃµ½ĞÇÆÚ±àºÅ£©  
-    if(today.getDay()==0)   WW   =   "ĞÇÆÚÈÕ ";  
-    if(today.getDay()==1)   WW   =   "ĞÇÆÚÒ» "; 
-    if(today.getDay()==2)   WW   =   "ĞÇÆÚ¶ş ";   
-    if(today.getDay()==3)   WW   =   "ĞÇÆÚÈı ";   
-    if(today.getDay()==4)   WW   =   "ĞÇÆÚËÄ ";   
-    if(today.getDay()==5)   WW   =   "ĞÇÆÚÎå ";   
-    if(today.getDay()==6)   WW   =   "ĞÇÆÚÁù ";   
-    document.getElementById('nowYMDSpan').innerHTML=YY+"Äê"+MM+"ÔÂ"+DD+"ÈÕ";    
+    var WW; //ç”¨äºä¿å­˜æ˜ŸæœŸï¼ˆgetDay()æ–¹æ³•å¾—åˆ°æ˜ŸæœŸç¼–å·ï¼‰  
+    if(today.getDay()==0)   WW   =   "æ˜ŸæœŸæ—¥ ";  
+    if(today.getDay()==1)   WW   =   "æ˜ŸæœŸä¸€ "; 
+    if(today.getDay()==2)   WW   =   "æ˜ŸæœŸäºŒ ";   
+    if(today.getDay()==3)   WW   =   "æ˜ŸæœŸä¸‰ ";   
+    if(today.getDay()==4)   WW   =   "æ˜ŸæœŸå›› ";   
+    if(today.getDay()==5)   WW   =   "æ˜ŸæœŸäº” ";   
+    if(today.getDay()==6)   WW   =   "æ˜ŸæœŸå…­ ";   
+    document.getElementById('nowYMDSpan').innerHTML=YY+"å¹´"+MM+"æœˆ"+DD+"æ—¥";    
     document.getElementById('nowHMSSpan').innerHTML= HH+":"+MI+":"+SS;    
     document.getElementById('nowWeekSpan').innerHTML=WW;
-    setTimeout('startTime()',1000);//Ã¿Ò»ÃëÖĞÖØĞÂ¼ÓÔØstartTime()·½·¨   
+    setTimeout('startTime()',1000);//æ¯ä¸€ç§’ä¸­é‡æ–°åŠ è½½startTime()æ–¹æ³•   
 }     
   
 function checkTime(i)     
