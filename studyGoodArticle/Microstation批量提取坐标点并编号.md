@@ -16,7 +16,7 @@
 
 下图为操作过程动图
 
-![1](https://github.com/user-attachments/assets/d12c68f2-6ef9-4de4-9c5b-0139dde26a82)
+![1](../images/二维码收款.jpg)
 
 ## 2.2 坐标点编号
 
