@@ -8,7 +8,7 @@
 
 # 2 操作步骤 
 
-以下，将逐步介绍如何批量导出坐标、编号并将带坐标的编号导入。[百度](http://www.baidu.com)
+以下，将逐步介绍如何批量导出坐标、编号并将带坐标的编号导入
 
 ## 2.1 导出范围线的坐标
 
@@ -16,7 +16,7 @@
 
 下图为操作过程动图
 
-<img width="900" height="694" alt="image" src="https://github.com/user-attachments/assets/49df645b-6a59-42f2-bf5e-1615a1ee5799" />
+![1](https://github.com/user-attachments/assets/d12c68f2-6ef9-4de4-9c5b-0139dde26a82)
 
 ## 2.2 坐标点编号
 
