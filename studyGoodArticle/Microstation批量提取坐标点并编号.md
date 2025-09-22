@@ -17,6 +17,8 @@
 
 下图为操作过程动图
 
+<img src="../images/导出坐标.gif" width="90" height="80">
+
 ![1](../images/导出坐标.gif)
 
 ## 2.2 坐标点编号
