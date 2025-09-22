@@ -17,9 +17,7 @@
 
 下图为操作过程动图
 
-<img src="../images/导出坐标.gif" width="90" height="80">
-
-![1](../images/导出坐标.gif)
+<img src="../images/Microstation批量提取坐标点并编号/导出坐标.gif" width="900" height="694" alt="image" />
 
 ## 2.2 坐标点编号
 
@@ -27,7 +25,7 @@
 
 下图为操作过程动图
 
-<img width="900" height="694" alt="image" src="https://github.com/user-attachments/assets/a246a956-3a04-46b6-ade5-1a402e73b25e" />
+![](../images/Microstation批量提取坐标点并编号/坐标点编号.gif)
 
 ## 2.3 导入带坐标属性的编号
 
@@ -35,7 +33,7 @@
 
 下图为操作过程动图
 
-<img width="600" height="463" alt="image" src="https://github.com/user-attachments/assets/b0a57a0a-9476-44b0-9d8c-68da987b6345" />
+<img src="../images/Microstation批量提取坐标点并编号/导入编号.gif" width="900" height="694" alt="image" />
 
 # 3 需要说明的问题
 
